@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- Hallmark · macrostructure: arched-masthead + ruled-sheet · theme: Kashi & Lime · genre: editorial
+     pre-emit critique: P4 H4 E4 S4 R4 V4 · slop test: pass -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walled City Feedback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Mulish:wght@400;600;700;800&family=Noto+Nastaliq+Urdu:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- = HEADER = -->
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#top">
+      
+        <img class="logo" src="images/logo.jpeg" alt="Walled City of Lahore Authority">
+        <img class="logo" src="images/glogo.png" alt="Government of Punjab">
+      </a>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <span>Home</span><span>/</span><span>Information</span><span>/</span><b>Feedback</b>
+      </nav>
+    </div>
+  </header>
+
+  <!-- = MAIN: FORM + SIDEBAR= -->
+  <main class="wrap grid">
+
+    <section class="intro" id="top">
+      <div class="arch">
+      <p class="urdu" lang="ur">آپ کی رائے ہمارے لیے اہم ہے</p>
+      <h1>Tell us about your visit to Old Lahore</h1>
+      <p class="lead">Whether you walked through Delhi Gate, toured the Shahi Hammam or joined an evening event, your feedback helps the team look after the Walled City for the next visitor.</p>
+      <ol class="steps" aria-label="What happens next">
+        <li><i>1</i> You send the form</li>
+        <li><i>2</i> You get a reference number</li>
+        <li><i>3</i> The team reads and follows up</li>
+      </ol>
+      </div>
+    </section>
+
+    <div class="col">
+    <section class="sheet" id="formCard">
+      <form id="fb" novalidate>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <fieldset>
+          <legend>What would you like to share?</legend>
+          <p class="hint">Pick the option that fits best.</p>
+          <div class="chips" role="radiogroup" aria-label="Feedback type">
+            <span class="chip"><input type="radio" name="type" id="t1" value="Feedback" checked><label for="t1">General feedback</label></span>
+            <span class="chip"><input type="radio" name="type" id="t2" value="Suggestion"><label for="t2">Suggestion</label></span>
+            <span class="chip"><input type="radio" name="type" id="t3" value="Complaint"><label for="t3">Complaint</label></span>
+            <span class="chip"><input type="radio" name="type" id="t4" value="Appreciation"><label for="t4">Appreciation</label></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About your visit</legend>
+          <div class="row two">
+            <div class="field" id="f-place">
+              <label class="l" for="place">Place you visited</label>
+              <select id="place" name="place">
+                <option value="">Choose a place</option>
+                <option>Walled City of Lahore (streets and gates)</option>
+                <option>Lahore Fort</option>
+                <option>Shahi Hammam</option>
+                <option>Shalimar Garden</option>
+                <option>Barkat Ali Hall</option>
+                <option>Shahdara Complex</option>
+                <option>History By Night</option>
+                <option>Tour or event</option>
+                <option>Website or online booking</option>
+                <option>Other</option>
+              </select>
+              <p class="err" id="e-place"></p>
+            </div>
+            <div class="field">
+              <label class="l" for="date">Date of visit <span class="opt">(optional)</span></label>
+              <input type="date" id="date" name="date">
+            </div>
+          </div>
+          <div class="row two">
+            <div class="field">
+              <label class="l" for="visitor">You visited as</label>
+              <select id="visitor" name="visitor">
+                <option>Tourist from Pakistan</option>
+                <option>Overseas visitor</option>
+                <option>Walled City resident or shopkeeper</option>
+                <option>Student or school group</option>
+                <option>Researcher or writer</option>
+                <option>Photographer or film crew</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="l" for="group">Group size</label>
+              <select id="group" name="group">
+                <option>Just me</option>
+                <option>2 to 4 people</option>
+                <option>5 to 15 people</option>
+                <option>More than 15</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>How was it?</legend>
+
+          <div class="field" id="f-overall">
+            <p class="lbl">Overall experience</p>
+            <div class="rate-main">
+            
+              <div class="stars" data-name="overall" data-label="Overall rating"></div>
+              <span class="rate-word" id="overallWord" aria-live="polite"></span>
+            </div>
+            <p class="err" id="e-overall"></p>
+          </div>
+
+          <p class="hint">Rate any of these if you can. Skip the ones that do not apply.</p>
+          <div class="sub">
+            <div class="item"><span>Cleanliness</span><div class="stars sm" data-name="clean" data-label="Cleanliness"></div></div>
+            <div class="item"><span>Guides and staff</span><div class="stars sm" data-name="staff" data-label="Guides and staff"></div></div>
+            <div class="item"><span>Signs and information</span><div class="stars sm" data-name="sign" data-label="Signs and information"></div></div>
+            <div class="item"><span>Accessibility</span><div class="stars sm" data-name="access" data-label="Accessibility"></div></div>
+            <div class="item"><span>Safety</span><div class="stars sm" data-name="safe" data-label="Safety"></div></div>
+            <div class="item"><span>Ticket value</span><div class="stars sm" data-name="value" data-label="Ticket value"></div></div>
+          </div>
+
+          <div class="field spaced">
+            <p class="lbl">What stood out? <span class="opt">(pick any)</span></p>
+            <div class="chips">
+              <span class="chip"><input type="checkbox" name="tag" id="g1" value="Rich history"><label for="g1">Rich history</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g2" value="Beautiful restoration"><label for="g2">Beautiful restoration</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g3" value="Friendly guides"><label for="g3">Friendly guides</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g4" value="Great food"><label for="g4">Great food</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g5" value="Crowded"><label for="g5">Crowded</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g6" value="Needs repair"><label for="g6">Needs repair</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g7" value="Hard to find the way"><label for="g7">Hard to find the way</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g8" value="Parking trouble"><label for="g8">Parking trouble</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g9" value="Litter"><label for="g9">Litter</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g10" value="Poor lighting"><label for="g10">Poor lighting</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g11" value="Good for families"><label for="g11">Good for families</label></span>
+              <span class="chip"><input type="checkbox" name="tag" id="g12" value="Worth a second visit"><label for="g12">Worth a second visit</label></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your message</legend>
+          <div class="field" id="f-message">
+            <label class="l" for="message">Tell us what happened or what you suggest</label>
+            <textarea id="message" name="message" maxlength="1200" placeholder="For example: the signage near Masti Gate was hard to follow, and a map at the entrance would help."></textarea>
+            <div class="counter"><span id="count">0</span> / 1200</div>
+            <p class="err" id="e-message"></p>
+          </div>
+
+          <div class="field spaced">
+            <p class="lbl">Photos <span class="opt">(optional, up to 3 images, 5 MB each)</span></p>
+            <label class="drop" id="drop">
+              <input type="file" id="files" accept="image/*" multiple>
+              Tap to add photos or drop them here
+            </label>
+            <p class="err" id="e-files"></p>
+            <div class="thumbs" id="thumbs"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your details</legend>
+          <label class="check"><input type="checkbox" id="anon" name="anonymous"><span>Send this anonymously. We will not be able to reply.</span></label>
+
+          <div id="contact">
+            <div class="row two">
+              <div class="field" id="f-name">
+                <label class="l" for="name">Full name</label>
+                <input type="text" id="name" name="name" autocomplete="name">
+                <p class="err" id="e-name"></p>
+              </div>
+              <div class="field" id="f-email">
+                <label class="l" for="email">Email <span class="opt" id="emailOpt">(optional)</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email">
+                <p class="err" id="e-email"></p>
+              </div>
+            </div>
+            <div class="row two">
+              <div class="field">
+                <label class="l" for="phone">Phone or WhatsApp <span class="opt">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+92 3xx xxxxxxx">
+              </div>
+              <div class="field">
+                <label class="l" for="city">City or country</label>
+                <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="Lahore, Pakistan">
+              </div>
+            </div>
+            <label class="check"><input type="checkbox" id="reply" name="reply_requested"><span>Please reply to me about this feedback.</span></label>
+          </div>
+
+          <div class="field" id="f-consent">
+            <label class="check"><input type="checkbox" id="consent" name="consent"><span>I agree that the team may store this feedback and use it to improve the site and visitor services.</span></label>
+            <p class="err" id="e-consent"></p>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="btn" type="submit">Send feedback</button>
+          <button class="btn ghost" type="button" id="reset">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <aside>
+      <div class="panel info">
+        <h2>Other ways to reach us</h2>
+        <dl>
+          <div><dt>Address</dt><dd><span>54-Lawrence Road, Lahore, Pakistan</span><button class="copy" type="button" data-copy="54-Lawrence Road, Lahore, Pakistan">Copy</button></dd></div>
+          <div><dt>Email</dt><dd><span>walledcitylahoreauthority@gmail.com</span><button class="copy" type="button" data-copy="walledcitylahoreauthority@gmail.com">Copy</button></dd></div>
+          <div><dt>Phone</dt><dd><span>+92 42 99204238</span><button class="copy" type="button" data-copy="+92 42 99204238">Copy</button></dd></div>
+        </dl>
+      </div>
+
+      <div class="panel urgent">
+        <h2>Need help right now?</h2>
+        <p>This form is for feedback, not emergencies. If someone is hurt or in danger at a site, call 1122 for rescue or 15 for police.</p>
+      </div>
+
+      <div class="panel faq">
+        <h2>Common questions</h2>
+        <details><summary>Will I get a reply?</summary><p>If you leave an email or phone number and tick the reply box, the team can contact you.</p></details>
+        <details><summary>Can I report a damaged monument?</summary><p>Yes. Choose "Complaint", pick the place, and add a photo so the team can find the spot.</p></details>
+        <details><summary>Is my feedback public?</summary><p>No. Your name and contact details stay with the team.</p></details>
+      </div>
+
+      <div class="panel">
+        <h2>Tips for useful feedback</h2>
+        <p>Name the place and the spot, add the date of your visit, and attach a photo if something needs repair. This helps the team act faster.</p>
+      </div>
+    </aside>
+    </div>
+  </main>
+
+  <!-- = FOOTER = -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Walled City of Lahore</h3>
+        <p>Your feedback helps the team look after the living heritage of Old Lahore.</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="https://walledcitylahore.gop.pk/">Official website</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Tours &amp; events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>54-Lawrence Road, Lahore, Pakistan</li>
+          <li>walledcitylahoreauthority@gmail.com</li>
+          <li>+92 42 99204238</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">&copy; <span id="year">2026</span> Walled City of Lahore. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
